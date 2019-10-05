@@ -1,0 +1,23 @@
+<form #loginForm="ngForm">
+    <div class="inputGroup inputGroup1" style="text-align: center">
+        <label>PERFIL</label>
+    </div>
+    <div class="inputGroup inputGroup1">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario" readonly />
+    </div>
+    <div class="inputGroup inputGroup1">
+        <label for="usuario">Roles</label>        
+        <mat-list-item *ngFor="let item of roles">
+            <mat-icon mat-list-icon>folder</mat-icon>            
+            <p mat-line> {{item}} </p>
+          </mat-list-item>
+    </div>
+
+    <div class="inputGroup inputGroup3">
+        <button mat-raised-button color="accent" routerLink='/paciente' type="button">
+            <mat-icon>close</mat-icon>
+            <span>Cancelar</span>
+        </button>
+    </div>
+</form>
